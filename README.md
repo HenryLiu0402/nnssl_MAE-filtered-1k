@@ -20,7 +20,7 @@ batch_size = 4
 initial_lr = 1e-2  
 patch_size = (160, 160, 160)  
 mask ratio: 0.75  
-num_epochs = 500  
+num_epochs = 1000  
 filtered modalities: "T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"
 
 ## Example
