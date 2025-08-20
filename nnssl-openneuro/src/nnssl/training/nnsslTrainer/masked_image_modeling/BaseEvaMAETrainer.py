@@ -276,6 +276,7 @@ class BaseEvaMAETrainer(BaseMAETrainer):
             if checkpoint["grad_scaler_state"] is not None:
                 self.grad_scaler.load_state_dict(checkpoint["grad_scaler_state"])
 
+############################# My Trainer #############################
 
 class BaseEvaMAETrainer_BS4_filtered_1000ep(BaseEvaMAETrainer):
     def __init__(
@@ -289,9 +290,11 @@ class BaseEvaMAETrainer_BS4_filtered_1000ep(BaseEvaMAETrainer):
         super().__init__(plan, configuration_name, fold, pretrain_json, device)
         self.config_plan.patch_size = (160, 160, 160)
         self.total_batch_size = 4
+        self.initial_lr = 1e-2
         self.iimg_filters.append(ModalityFilter(valid_modalities=["T1w", "inplainT1", "MP2RAGE", "FLAIR", "T2w", "inplainT2", "ADC", "DWI"]))
         self.num_epochs = 1000
 
+############################# Others #############################
 class BaseEvaMAETrainer_BS8(BaseEvaMAETrainer):
     def __init__(
         self,
