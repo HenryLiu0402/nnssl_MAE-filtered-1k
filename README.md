@@ -9,7 +9,7 @@ In addition, we conducted extensive hyperparameter explorations (e.g., learning 
 Due to the time constraints of the competition, our best-performing approach is pure MAE with the filtered dataset
 
 
-## Environment
+## Our Environment
 **GPU:** NVIDIA RTX A6000 (NVIDIA TITAN RTX)  
 **RAM:** 128G (64G)  
 **Python:** 3.10.12  
