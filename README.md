@@ -25,11 +25,11 @@ MAE encourages fine-grained feature learning by reconstructing masked inputs, wh
 By focusing on key modalities, we reduce noise from less common or unrelated sequences, allowing the model to concentrate its representation capacity on the most task-relevant contrasts.
 
 ## Hyperparameter Settings 
-batch_size = 4  
-initial_lr = 1e-2  
-patch_size = (160, 160, 160)  
+batch size = 4  
+initial learning rate = 1e-2  
+patch size = (160, 160, 160)  
 mask ratio: 0.75  
-num_epochs = 1000  
+training epochs = 1000  
 filtered modalities: T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI
 
 ## Example
