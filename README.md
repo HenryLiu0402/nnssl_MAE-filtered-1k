@@ -3,7 +3,7 @@ NTUST_EE304 @[SSL3D Challenge](https://ssl3d-challenge.dkfz.de/home)
 Primus-M network architecture
 
 ## Description
-We evaluated different SSL strategies and dataset settings for the Primus-M track.
+We evaluated various SSL strategies and dataset settings for the Primus-M track.
 Our experiments included Masked Autoencoder (MAE) with both full and filtered datasets of varying sizes, as well as alternative SSL methods such as VoCo. 
 In addition, we conducted extensive hyperparameter explorations (e.g., learning rates, batch sizes, masking ratios) to study their impact on model performance.  
 Due to the time constraints of the competition, our best-performing approach is pure MAE with the filtered dataset
@@ -20,7 +20,7 @@ Due to the time constraints of the competition, our best-performing approach is 
 Our final pretraining strategy consists of a single-stage pipeline:
 
 ### MAE Pretraining (1000 epochs, filtered modalities)
-We perform Masked Autoencoder (MAE) pretraining on a filtered [OpenMind Dataset](https://huggingface.co/datasets/AnonRes/OpenMind) of modalities, **including T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, DWI**, which are most relevant to downstream segmentation and classification tasks. 
+We perform Masked Autoencoder (MAE) pretraining on a filtered [OpenMind Dataset](https://huggingface.co/datasets/AnonRes/OpenMind) of modalities, **including T1w, inplainT1, MP2RAGE, FLAIR, T2w, inplainT2, ADC, amd DWI**, which are most relevant to downstream segmentation and classification tasks. 
 MAE encourages fine-grained feature learning by reconstructing masked inputs, which improves the model’s ability to capture detailed anatomical structures. 
 By focusing on key modalities, we reduce noise from less common or unrelated sequences, allowing the model to concentrate its representation capacity on the most task-relevant contrasts.
 
